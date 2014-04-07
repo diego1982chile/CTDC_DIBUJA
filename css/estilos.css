@@ -1,0 +1,203 @@
+/* 
+    Document   : estilos
+    Created on : 26-07-2012, 07:15:01 PM
+    Author     : Alvaro
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+body {
+    background: rgba(0, 153, 204, 0.6) url("../img/square_bg.png") repeat;
+    padding-bottom: 20px;
+}
+
+
+
+.panel {
+    background: white;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .25), inset 0 -1px 0 rgba(0, 0, 0, .1);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+/*    padding: 20px;*/
+    margin-bottom: 20px;
+}
+
+.layout {
+    background: white;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .25), inset 0 -1px 0 rgba(0, 0, 0, .1);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding: 20px;
+    min-height: 500px;
+    text-align: center;
+}
+
+.layout p.watermark {
+    color: #ccc;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    line-height: 50px;
+}
+
+.header {
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 90px;
+    color: white;
+    text-shadow: 0px 3px 1px rgba(0,0,0,0.4);
+}
+
+label {
+    width: 80px !important;
+}
+
+.form-horizontal .controls {
+    margin-left: 90px !important;
+}
+
+p.creditos {
+    text-align: center;
+}
+
+p.creditos a {
+    color: whitesmoke;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+}
+
+p.creditos a:hover {
+    text-decoration: none;
+    color: white;
+
+}
+
+.btn-large {
+    width: 100% !important;
+}
+
+form {
+    margin: 0;
+}
+
+.form-horizontal .form-actions {
+    padding-left: 20px;
+    margin-bottom: 0px;
+    -webkit-border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px;
+}
+
+.input-midpend #appendedInput{
+    -webkit-border-radius: 3px 0 0 3px;
+    -moz-border-radius: 3px 0 0 3px;
+    border-radius: 3px 0 0 3px;
+    margin-right: -1px;
+}
+
+.input-midpend #prependedInput{
+    -webkit-border-radius: 0 3px 3px 0;
+    -moz-border-radius: 0 3px 3px 0;
+    border-radius: 0 3px 3px 0;
+    margin-left: -1px;
+}
+
+.input-midpend input[class*="span"],
+.input-midpend .uneditable-input[class*="span"],
+.row-fluid .input-midpend [class*="span"] {
+    display: inline-block;
+}
+
+.input-midpend input,
+.input-midpend select,
+.input-midpend .uneditable-input {
+    position: relative;
+    margin-bottom: 0;
+    *margin-left: 0;
+    vertical-align: middle;
+}
+
+.input-midpend .add-on {
+    display: inline-block;
+    width: auto;
+    height: 18px;
+    min-width: 16px;
+    padding: 4px 5px;
+    font-weight: normal;
+    line-height: 18px;
+    text-align: center;
+    text-shadow: 0 1px 0 #ffffff;
+    vertical-align: middle;
+    background-color: #eeeeee;
+    border: 1px solid #ccc;
+}
+
+.control-group .error .input-midpend .add-on{
+    color: #b94a48;
+    background-color: #f2dede;
+    border-color: #b94a48;
+}
+
+.control-group .error .input-midpend input{
+    color: #b94a48;
+    border-color: #b94a48;
+}
+
+.control-group .error .input-midpend label{
+    color: #b94a48;
+}
+
+.subnav {
+    background-color: #EEE;
+    background-repeat: repeat-x;
+    background-image: -moz-linear-gradient(top, whiteSmoke 0%, #EEE 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,whiteSmoke), color-stop(100%,#EEE));
+    background-image: -webkit-linear-gradient(top, whiteSmoke 0%,#EEE 100%);
+    background-image: -ms-linear-gradient(top, whiteSmoke 0%,#EEE 100%);
+    background-image: -o-linear-gradient(top, whiteSmoke 0%,#EEE 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#eeeeee',GradientType=0 );
+    background-image: linear-gradient(top, whiteSmoke 0%,#EEE 100%);
+    border: 1px solid #E5E5E5;
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius:  4px 4px 0 0;
+    border-radius:  4px 4px 0 0;
+    border-color: #D5D5D5;
+    -webkit-box-shadow: inset 0 1px 0 white, 0 1px 5px rgba(0, 0, 0, .1);
+    -moz-box-shadow: inset 0 1px 0 #fff, 0 1px 5px rgba(0,0,0,.1);
+    box-shadow: inset 0 1px 0 white, 0 1px 5px rgba(0, 0, 0, .1);
+    margin-bottom: 20px;
+}
+
+.subnav .nav {
+    margin: 0 auto;
+    padding: 0 1px;
+}
+
+.subnav .nav > li > a {
+    margin: 0;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    border-left: 1px solid whiteSmoke;
+    border-right: 1px solid #E5E5E5;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.subnav .nav > .active > a, .subnav .nav > .active > a:hover {
+    padding-left: 13px;
+    color: #777;
+    background-color: #E9E9E9;
+    border-right-color: #DDD;
+    border-left: 0;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .05);
+    -moz-box-shadow: inset 0 3px 5px rgba(0,0,0,.05);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, .05);
+}

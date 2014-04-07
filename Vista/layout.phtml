@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html  xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script src="js/jquery-1.7.min.js" type="text/javascript"></script>
+        <script src="js/jquery.validate.min.js" type="text/javascript"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="js/base.js" type="text/javascript"></script>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css?lele" />
+        <link rel="stylesheet" type="text/css" href="css/estilos.css?06052012" />
+        <title>Dibuja</title>
+        <script type="text/javascript">
+/*
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-29417526-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+*/
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Dibuja</h1>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span8 layout" id="layout"><p class="watermark">Completa los datos<br/> para generar el layout</p></div>
+                <div class="span4">
+                    <div class="panel">
+                        <div class="subnav">
+                        <ul class="nav nav-pills">
+                            <li class="active"><a href="#sp" data-toggle="tab">Strip Packing</a></li>
+                            <li><a href="#cp" data-toggle="tab">Cutting Problem</a></li>
+                        </ul>
+                        </div>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="sp">
+<!--                                Formulario para Strip Packing-->
+                                <form class="form-horizontal" action="?sec=SP&do=genera" method="POST" id="formSP">
+                                    <div class="control-group">
+                                        <label class="control-label" for="ancho">Ancho: </label>
+                                        <div class="controls">
+                                            <input type="text" class="span4 required digits" id="ancho" name="ancho" placeholder="20">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label" for="alto">Alto: </label>
+                                        <div class="controls">
+                                            <input type="text" class="span4 required digits" id="alto" name="alto" placeholder="21">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label" for="optimo">Optimo: </label>
+                                        <div class="controls">
+                                            <input type="text" class="span4 digits" id="optimo" name="optimo" placeholder="20">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label" for="zoom">Zoom: </label>
+                                        <div class="controls">
+                                            <input type="text" class="span4 " id="zoom" name="zoom" placeholder="20">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label" for="piezas">Piezas: </label>
+                                        <div class="controls">
+                                            <textarea name="piezas" id="piezas" class="required span11" rows="5" placeholder="<x1,y1,ancho1,alto1>;<x2,y2,ancho2,alto2>. Ej: 0,0,12,2;0,2,12,7;0,9,11,2"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-actions">
+                                        <input type="submit" class="btn btn-inverse btn-large" value="Generar Layout" id="btnSP" />
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="tab-pane" id="cp">
+<!--                                Formulario para Cutting Problem-->
+                                <form class="form-horizontal" action="?sec=CP&do=genera" method="POST" id="formCP">
+                                    <div class="control-group">
+                                        <label class="control-label" for="ancho">Lamina: </label>
+                                        <div class="controls">
+                                            <div class="input-midpend">
+                                                <input class="span3 required digits" id="appendedInput" id="ancho" name="ancho" placeholder="ancho" type="text" ><span class="add-on">X</span><input class="span3 required digits" id="prependedInput" id="alto" name="alto" placeholder="alto" type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label" for="zoom">Zoom: </label>
+                                        <div class="controls">
+                                            <input type="text" class="span4 required " id="zoom" name="zoom" placeholder="20">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label" for="piezas">Piezas: </label>
+                                        <div class="controls">
+                                            <textarea name="piezas" id="piezas" class="required span11" rows="5" placeholder="<G|E|P,x1,y1,ancho1,alto1>;<G|E|P,x2,y2,ancho2,alto2>. Ej: E,69,0,1,40;P,44,30,16,1;G,44,19,16,11;P,0,28,29,3"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-actions">
+                                        <input type="submit" class="btn btn-inverse btn-large" value="Generar Layout" id="btnCP" />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="creditos"><strong><a href='#'>Dibuja</a></strong> - Desarrollado por <a href="http://www.twitter.com/neeph">Alvaro Flores</a> como parte de su proyecto de titulaci&oacute;n de Ingenier&iacute;a Civil Inform&aacute;tica, Universidad de Santiago de Chile</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
